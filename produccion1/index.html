@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOSHU</title>
+</head>
+
+<body>
+    <img class="logo" src="imagenes/moshulogo.png" alt="Logo">
+     <h1>MOSHU</h1>
+     <div class="menu-icon">
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+     
+    <div class="imagenes">
+        <div class="image-container">
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/sobrenosotros.png" alt="Sobre nosotros">
+            <div class="image-text">SOBRE NOSOTROS</div>
+        </a>
+
+        </div>
+        <div class="image-container">
+            <div class="slideshow">
+                <img class="slide" src="imagenes/productos.png" alt="Slide 1">
+                <img class="slide" src="imagenes/cafe2.png" alt="Slide 2">
+                <img class="slide" src="imagenes/cafe3.png" alt="Slide 3">
+              </div>
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <div class="image-text">PRODUCTOS</div>
+            </a>
+
+        </div>
+        <div class="image-container">
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/reservas.png" alt="Reservas">
+            <div class="image-text">RESERVAS</div>
+            </a>
+        </div>
+    </div>
+
+      <script>
+        const menuContent = document.querySelector('.imagenes');
+        menuContent.addEventListener('click', () => {
+            menuContent.classList.toggle('show');
+        });
+    </script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const slideshowContainer = document.querySelector('.image-container .slideshow');
+      const slides = slideshowContainer.querySelectorAll('.slide');
+      const intervalTime = 2000; 
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.style.display = 'block';
+          } else {
+            slide.style.display = 'none';
+          }
+        });
+      }
+  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+  
+      setInterval(nextSlide, intervalTime);
+  
+      
+      showSlide(currentIndex);
+  
+      
+      slideshowContainer.style.display = 'block';
+    });
+  </script>
+
+
+<div class="social-media-icons">
+<a href="https://www.facebook.com/compartimoshu/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/compartimoshu/?hl=en" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+</div>
+
+
+
+</body>
+</html>
