@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOSHU</title>
+</head>
+
+<body>
+  <a href="index.html">
+    <img class="logo" src="imagenes/moshulogo.png" alt="Logo">
+    <h1 id="main-heading">MOSHU</h1>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./sobrenosotros.html">SOBRE NOSOTROS</a>
+      <a href="./productos.html">PRODUCTOS</a>
+      <a href="./reservas.html">RESERVAS</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </a>
+
+  <div class="square"></div>
+
+  <div class="title-container">
+    <h2>PRODUCTOS</h2>
+  </div>
+
+
+<div class="card-container">
+<div class="card">
+  <img src="imagenes/producto1.jpg" alt="Producto1" style="width:100%">
+  <h3>BRUSCHETTA DE JAMÓN CRUDO</h3>
+  <p class="price">$3200</p>
+  <p>Jamón crudo, cremoso queso de cabra, rúcula, albahaca, tomate confitado, zucchini grillado, huevo mollet, en pan integral de molde.</p>
+</div>
+
+
+<div class="card">
+  <img src="imagenes/producto2.jpg" alt="Producto2" style="width:100%">
+  <h3>TRISQUETTA</h3>
+  <p class="price">$2450</p>
+  <p>Tres tostadas integrales con palta en láminas, tomates cherry y aceite de albahaca.</p>
+</div>
+<div class="card">
+  <img src="imagenes/producto3.jpg" alt="Producto3" style="width:100%">
+  <h3>YOGURT COMPLETO</h3>
+  <p class="price">$1900</p>
+  <p>Yogur casero natural acompañado de frutas frescas de estación y granola Moshu, mas dip de mermelada.</p>
+</div>
+
+<div class="card">
+  <img src="imagenes/producto4.jpg" alt="Producto4" style="width:100%">
+  <h3>LEMON PIE</h3>
+  <p class="price">$1950</p>
+  <p>Base sablée de vainilla, curd de limón y merengue italiano.</p>
+</div>
+
+<div class="card">
+  <img src="imagenes/producto5.jpg" alt="Producto5" style="width:100%">
+  <h3>PECAN LAYER CAKE</h3>
+  <p class="price">$1950</p>
+  <p>Nuestra espectacular versión de un clásico cinematográfico. Bizcochuelo de nuez pecan, cream cheese vainilla frosting, cremoso de pecan y nueces.</p>
+</div>
+
+<div class="card">
+  <img src="imagenes/producto6.jpg" alt="Producto6" style="width:100%">
+  <h3>RED VELVET</h3>
+  <p class="price">$1850</p>
+  <p>The One and Only. Nuestra reina inigualable: bizcocho súper húmedo de cacao y cream cheese vainilla frosting.</p>
+</div>
+</div>
+
+<footer class="footer-box">
+  <div class="social-media-icons">
+    <a href="https://www.facebook.com/compartimoshu/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/compartimoshu/?hl=en" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+             
+    </body>

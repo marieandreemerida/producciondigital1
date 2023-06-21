@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOSHU</title>
+</head>
+
+<body>
+  <a href="index.html">
+    <img class="logo" src="imagenes/moshulogo.png" alt="Logo">
+     <h1 id="main-heading">MOSHU</h1>
+     <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./sobrenosotros.html">SOBRE NOSOTROS</a>
+      <a href="./productos.html">PRODUCTOS</a>
+      <a href="./reservas.html">RESERVAS</a>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
+        
+    <div class="imagenes">
+        <div class="image-container">
+            <a href="./sobrenosotros.html" target="_self" rel="noopener noreferrer">
+            <img src="imagenes/sobrenosotros.png" alt="Sobre nosotros">
+            <div class="image-text">SOBRE NOSOTROS</div>
+        </a>
+
+        </div>
+        <div class="image-container">
+            <div class="slideshow">
+                <img class="slide" src="imagenes/productos.png" alt="Slide 1">
+                <img class="slide" src="imagenes/cafe2.png" alt="Slide 2">
+                <img class="slide" src="imagenes/cafe3.png" alt="Slide 3">
+              </div>
+            <a href="./productos.html" target="_self" rel="noopener noreferrer">
+            <div class="image-text">PRODUCTOS</div>
+            </a>
+
+        </div>
+        <div class="image-container">
+            <a href="./reservas.html" target="_self" rel="noopener noreferrer">
+            <img src="imagenes/reservas.png" alt="Reservas">
+            <div class="image-text">RESERVAS</div>
+            </a>
+        </div>
+    </div>
+
+      <script>
+        const menuContent = document.querySelector('.imagenes');
+        menuContent.addEventListener('click', () => {
+            menuContent.classList.toggle('show');
+        });
+    </script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const slideshowContainer = document.querySelector('.image-container .slideshow');
+      const slides = slideshowContainer.querySelectorAll('.slide');
+      const intervalTime = 2000; 
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.style.display = 'block';
+          } else {
+            slide.style.display = 'none';
+          }
+        });
+      }
+  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+  
+      setInterval(nextSlide, intervalTime);
+  
+      
+      showSlide(currentIndex);
+  
+      
+      slideshowContainer.style.display = 'block';
+    });
+  </script>
+
+
+<footer class="footer-box">
+  <div class="social-media-icons">
+    <a href="https://www.facebook.com/compartimoshu/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/compartimoshu/?hl=en" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOSHU</title>
+</head>
+
+<body>
+  <a href="index.html">
+    <img class="logo" src="imagenes/moshulogo.png" alt="Logo">
+    <h1 id="main-heading">MOSHU</h1>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./sobrenosotros.html">SOBRE NOSOTROS</a>
+      <a href="./productos.html">PRODUCTOS</a>
+      <a href="./reservas.html">RESERVAS</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </a>
+
+  <div class="square"></div>
+
+  <div class="title-container">
+    <h2>RESERVAS</h2>
+  </div>
+
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action="reservation.php" method="post" class="small-form">
+    <div class="elem-group">
+      <label for="name">NOMBRE</label>
+      <input type="text" id="name" name="visitor_name" placeholder="NOMBRE..." pattern=[A-Z\sa-z]{3,20} required>
+    </div>
+    <div class="elem-group">
+      <label for="email">CORREO ELECTRÓNICO</label>
+      <input type="email" id="email" name="visitor_email" placeholder="CORREO ELECTRÓNICO..." required>
+    </div>
+    <div class="elem-group">
+      <label for="phone">NÚMERO DE TELÉFONO</label>
+      <input type="tel" id="phone" name="visitor_phone" placeholder="NÚMERO DE TELÉFONO..." pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label for="adult">ADULTOS</label>
+      <input type="number" id="adult" name="total_adults" placeholder="1" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="child">NIÑOS</label>
+      <input type="number" id="child" name="total_children" placeholder="1" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkin-date">FECHA</label>
+      <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout-date">HORA</label>
+        <input type="time" id="checkout-date" name="checkout" required>
+      </div>
+      
+        
+    <div class="elem-group">
+      <label for="room-selection">UBICACIÓN</label>
+      <select id="room-selection" name="room_preference" required>
+          <option value="">UBICACIÓN</option>
+          <option value="patio">PATIO</option>
+          <option value="adentro">ADENTRO</option>
+          <option value="rooftop">ROOFTOP</option>
+      </select>
+    </div>
+    <hr>
+    <div class="elem-group">
+      <label for="message">DETALLES</label>
+      <textarea id="message" name="visitor_message" placeholder="COMENTANOS SI NECESITAS ALGO MÁS." required></textarea>
+    </div>
+    <button type="submit">RESERVAR</button>
+  </form>
+
+  <script>
+ var currentDateTime = new Date();
+var hour = currentDateTime.getHours();
+var minute = currentDateTime.getMinutes();
+
+if (hour < 10) {
+  hour = '0' + hour;
+}
+if (minute < 10) {
+  minute = '0' + minute;
+}
+
+var currentTime = hour + ":" + minute;
+var checkinElem = document.querySelector("#checkin-date");
+var checkoutElem = document.querySelector("#checkout-date");
+
+checkinElem.onchange = function() {
+  checkoutElem.setAttribute("min", this.value);
+};
+
+checkoutElem.setAttribute("min", currentTime);
+</script>
+
+<footer class="footer-box">
+  <div class="social-media-icons">
+    <a href="https://www.facebook.com/compartimoshu/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/compartimoshu/?hl=en" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+  </div>
+</footer>
+

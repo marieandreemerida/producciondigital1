@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOSHU</title>
+</head>
+
+<body>
+  <a href="index.html">
+    <img class="logo" src="imagenes/moshulogo.png" alt="Logo">
+     <h1 id="main-heading">MOSHU</h1>
+     <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="./sobrenosotros.html">SOBRE NOSOTROS</a>
+      <a href="./productos.html">PRODUCTOS</a>
+      <a href="./reservas.html">RESERVAS</a>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+    </div>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
+       
+
+<div class="title-container">
+  <h2>SOBRE NOSOTROS</h2>
+</div>
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="main-container">
+  <div class="image-container">
+    <img src="imagenes/lucas.jpg" alt="LUCAS" class="image">
+  </div>
+  <div class="text-container">
+    <h3>MOSHU ES FAMILIA</h3>
+    <p>Fundado por Lucas Villalba en 2020, Moshu se ha convertido en un negocio familiar después de enfrentar los desafíos de la pandemia y abrir un nuevo local en Palermo. El diseño del espacio, a cargo de Hitzig Militello Architects, se inspira en el árbol Moshu ubicado en el centro del patio, creando la ilusión de una casa en el árbol. Moshu Treehouse se ha convertido en uno de los restaurantes más populares de Buenos Aires, ofreciendo un acogedor espacio con opciones para todo el día y siendo un símbolo de la conexión entre la gastronomía y el entorno natural. Refugiate de la magia de Moshu Treehouse, un café digno para visitar.</p>
+  </div>
+</div>
+<hr>
+
+<div class="slideshow-container">
+  <div class="slide">
+    <img src="imagenes/slide1.jpeg" alt="Slide 1">
+  </div>
+  <div class="slide">
+    <img src="imagenes/slide2.jpeg" alt="Slide 2">
+  </div>
+  <div class="slide">
+    <img src="imagenes/slide3.jpeg" alt="Slide 3">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var slides = $('.slide');
+      var currentSlide = 0;
+  
+      function showSlide() {
+        slides.hide();
+        slides.eq(currentSlide).fadeIn();
+      }
+  
+      function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) {
+          currentSlide = 0;
+        }
+        showSlide();
+      }
+  
+      setInterval(nextSlide, 2000); 
+      showSlide();
+    });
+  </script>
+
+  
+
+<footer class="footer-box">
+  <div class="social-media-icons">
+    <a href="https://www.facebook.com/compartimoshu/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/compartimoshu/?hl=en" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a>
+  </div>
+</footer>
+</body>
+
+
+
+
+
+
+
+  
+  
